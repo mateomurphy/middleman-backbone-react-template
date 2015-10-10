@@ -1,6 +1,4 @@
-{div, h1, a, p, form, input, label}  = React.DOM
-
-PostForm = React.createClass
+MyApp.Views.PostForm = React.createClass
   mixins: [Backbone.React.Component.mixin]
 
   submitForm: ->
@@ -23,19 +21,22 @@ PostForm = React.createClass
       @refs.postBody.getDOMNode().value = ''
 
   render: ->
-    div className: 'panel panel-default',
-      div className: 'panel-heading', 'Create post'
-      div className: 'panel-body',
-        form className: 'post-form',
-          div className: 'form-group',
-            label {}, 'Title'
-            input ref: 'postTitle', className: 'form-control', type: 'text', placeholder: 'Enter title...'
+    <div className='panel panel-default'>
+      <div className='panel-heading'>Create post</div>
+      <div className='panel-body'>
+        <form className='post-form'>
+          <div className='form-group'>
+            <label>Title</label>
+            <input ref='postTitle' className='form-control' type='text' placeholder='Enter title...' />
+          </div>
 
-          div className: 'form-group',
-            label {}, 'Body'
-            input ref: 'postBody', className: 'form-control', type: 'text', placeholder: 'Enter body...'
+          <div className='form-group'>
+            <label>Body</label>
+            <input ref='postBody' className='form-control' type='text' placeholder='Enter body...' />
+          </div>
 
-          a className: 'btn btn-primary', onClick: @submitForm, 'Create post'
+          <a className='btn btn-primary' onClick={@submitForm}>Create post</a>
+        </form>
+      </div>
+    </div>
 
-
-MyApp.Views.PostForm = React.createFactory(PostForm)
