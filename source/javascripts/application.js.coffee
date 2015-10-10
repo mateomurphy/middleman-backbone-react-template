@@ -1,8 +1,8 @@
 #= require 'underscore/underscore'
-#= require 'jquery/dist/jquery'
+#= require 'jquery/jquery'
 #= require 'backbone/backbone'
 #= require 'react/react'
-#= require 'backbone-react-component/lib/component'
+#= require 'backbone-react-component/component'
 
 #= require 'app_scope'
 

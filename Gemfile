@@ -13,3 +13,12 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 
 # Windows does not come with time zone data
 gem "tzinfo-data", platforms: [:mswin, :mingw]
+
+source 'https://rails-assets.org' do
+  gem "rails-assets-underscore", "~> 1.7.0"
+  gem "rails-assets-backbone", "~> 1.1.2"
+  gem "rails-assets-react", "~> 0.12.1"
+  gem "rails-assets-jquery", "~> 2.1.1"
+  gem "rails-assets-backbone-react-component", "~> 0.7.2"
+  gem "rails-assets-bootstrap-sass", "~> 3.0.2"
+end
